@@ -19,6 +19,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
+    "build": "prisma generate && node server",
     "dev": "nodemon server"
   },
   "author": "",

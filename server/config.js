@@ -13,7 +13,7 @@ assert(PORT, 'Port is required');
 assert(HOST, 'Host is required');
 
 export default {
-  port: PORT,
-  host: HOST,
-  hostUrl: HOST_URL
+  port: PORT || 5000,
+  host: HOST || 'localhost',
+  hostUrl: HOST_URL || 'http://localhost:5000'
 };
