@@ -1,13 +1,14 @@
 import { Order, columns } from "@/app/columns";
 import { DataTable } from "./data-table";
+import { BASE_URL } from "../constants"
 
 async function fetchOrders(query: string): Promise<Order[]> {
   let fetchURL = "";
 
   if (query) {
-    fetchURL = `http://localhost:5000/api/orders?customer=${query}&status=${query}`;
+    fetchURL = `${BASE_URL}/api/orders?customer=${query}&status=${query}`;
   } else {
-    fetchURL = "http://localhost:5000/api/orders";
+    fetchURL = `${BASE_URL}/api/orders`;
   }
 
   const res = await fetch(fetchURL);
